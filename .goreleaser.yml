@@ -1,0 +1,24 @@
+# Build customization
+project_name: golang_sftp
+builds:
+  - main: main.go
+    binary: sailpoint
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - amd64
+# Archive customization
+archive: 
+  name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+  format: tar.gz
+  replacements:
+    amd64: 64-bit
+    darwin: macOS
+    linux: Tux
+  format_overrides:
+    - goos: windows
+      format: zip
+  files:
+    - config.yaml
