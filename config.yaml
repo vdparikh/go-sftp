@@ -1,0 +1,12 @@
+ftp:
+  server: "ftp.myserver.com:22"
+  user: "ftp_user"
+  password: "ftp_password"
+  location:
+    remotePath: "/RemoteLocation"
+    localPath: "/LocalLocation"    
+cron:
+  minutes: 10
+log:
+  logLevel: "info"
+  output: "file"
